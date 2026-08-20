@@ -9,7 +9,7 @@
 // 1. Google Sheets Webhook Configuration
 // ==========================================================================
 // Deploy google_apps_script.js as a Web App (Access: Anyone) and paste the Web App URL below:
-const GOOGLE_SHEET_WEBHOOK_URL = "";
+const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzv0DVFSUBtS_RDXXo1t6MX6Z2SQp90GUckyDzpHL9oBwiGaH1OwZebf9I7zx-FVrgm/exec";
 
 // ==========================================================================
 // 2. Audio Engine (Web Audio API)
