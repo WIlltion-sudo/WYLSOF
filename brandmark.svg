@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background subtle gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a121e"/>
+      <stop offset="100%" stop-color="#05080f"/>
+    </radialGradient>
+    
+    <!-- Neon Turquoise Gradient for Bars -->
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffd0"/>
+      <stop offset="30%" stop-color="#00e5a3"/>
+      <stop offset="100%" stop-color="#008b74"/>
+    </linearGradient>
+
+    <!-- Glow Filter for Nodes -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Circular Shield -->
+  <circle cx="250" cy="250" r="230" fill="url(#bgGrad)" stroke="#132338" stroke-width="3"/>
+  <circle cx="250" cy="250" r="215" fill="none" stroke="#00e5a3" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="6,6"/>
+
+  <!-- Baseline -->
+  <line x1="90" y1="385" x2="410" y2="385" stroke="#00e5a3" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Thin Constellation "W" Lines Connecting Node Tops -->
+  <!-- Coordinates: 
+       Node 1: (130, 240)
+       Node 2: (190, 140)
+       Node 3: (250, 290)
+       Node 4: (310, 140)
+       Node 5: (370, 240)
+  -->
+  <polyline points="130,240 190,140 250,290 310,140 370,240" fill="none" stroke="#00e5a3" stroke-width="1.8" stroke-opacity="0.5" stroke-dasharray="none"/>
+
+  <!-- Vertical Pill Bars -->
+  <!-- Bar 1: x=112, width=36, y=240, height=145, rx=18 -->
+  <rect x="112" y="240" width="36" height="145" rx="18" fill="url(#barGrad)"/>
+  
+  <!-- Bar 2: x=172, width=36, y=140, height=245, rx=18 -->
+  <rect x="172" y="140" width="36" height="245" rx="18" fill="url(#barGrad)"/>
+
+  <!-- Bar 3: x=232, width=36, y=290, height=95, rx=18 -->
+  <rect x="232" y="290" width="36" height="95" rx="18" fill="url(#barGrad)"/>
+
+  <!-- Bar 4: x=292, width=36, y=140, height=245, rx=18 -->
+  <rect x="292" y="140" width="36" height="245" rx="18" fill="url(#barGrad)"/>
+
+  <!-- Bar 5: x=352, width=36, y=240, height=145, rx=18 -->
+  <rect x="352" y="240" width="36" height="145" rx="18" fill="url(#barGrad)"/>
+
+  <!-- Glowing Circular Nodes on Top of Bars -->
+  <!-- Node 1 -->
+  <circle cx="130" cy="240" r="13" fill="#00ffd0" filter="url(#neonGlow)"/>
+  <circle cx="130" cy="240" r="7" fill="#ffffff"/>
+
+  <!-- Node 2 -->
+  <circle cx="190" cy="140" r="15" fill="#00ffd0" filter="url(#neonGlow)"/>
+  <circle cx="190" cy="140" r="8" fill="#ffffff"/>
+
+  <!-- Node 3 -->
+  <circle cx="250" cy="290" r="12" fill="#00ffd0" filter="url(#neonGlow)"/>
+  <circle cx="250" cy="290" r="6" fill="#ffffff"/>
+
+  <!-- Node 4 -->
+  <circle cx="310" cy="140" r="15" fill="#00ffd0" filter="url(#neonGlow)"/>
+  <circle cx="310" cy="140" r="8" fill="#ffffff"/>
+
+  <!-- Node 5 -->
+  <circle cx="370" cy="240" r="13" fill="#00ffd0" filter="url(#neonGlow)"/>
+  <circle cx="370" cy="240" r="7" fill="#ffffff"/>
+</svg>

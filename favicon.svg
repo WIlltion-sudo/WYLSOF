@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <radialGradient id="favBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1320"/>
+      <stop offset="100%" stop-color="#04070d"/>
+    </radialGradient>
+    <linearGradient id="favBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffd0"/>
+      <stop offset="100%" stop-color="#008b74"/>
+    </linearGradient>
+    <filter id="favGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#favBg)"/>
+  
+  <line x1="22" y1="102" x2="106" y2="102" stroke="#00e5a3" stroke-width="1" stroke-opacity="0.4"/>
+  <polyline points="32,64 48,36 64,76 80,36 96,64" fill="none" stroke="#00e5a3" stroke-width="1.2" stroke-opacity="0.6"/>
+
+  <rect x="27" y="64" width="10" height="38" rx="5" fill="url(#favBarGrad)"/>
+  <rect x="43" y="36" width="10" height="66" rx="5" fill="url(#favBarGrad)"/>
+  <rect x="59" y="76" width="10" height="26" rx="5" fill="url(#favBarGrad)"/>
+  <rect x="75" y="36" width="10" height="66" rx="5" fill="url(#favBarGrad)"/>
+  <rect x="91" y="64" width="10" height="38" rx="5" fill="url(#favBarGrad)"/>
+
+  <circle cx="32" cy="64" r="3.5" fill="#00ffd0" filter="url(#favGlow)"/>
+  <circle cx="48" cy="36" r="4" fill="#00ffd0" filter="url(#favGlow)"/>
+  <circle cx="64" cy="76" r="3" fill="#00ffd0" filter="url(#favGlow)"/>
+  <circle cx="80" cy="36" r="4" fill="#00ffd0" filter="url(#favGlow)"/>
+  <circle cx="96" cy="64" r="3.5" fill="#00ffd0" filter="url(#favGlow)"/>
+</svg>
